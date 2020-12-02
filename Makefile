@@ -22,6 +22,8 @@ SOURCES=	ft_bzero.c \
 			ft_strncmp.c \
 			ft_strlcpy.c \
 			ft_atoi.c \
+			ft_strdup.c \
+			*ft_calloc.c \
 
 CFLAGS= -Wall -Werror -Wextra
 

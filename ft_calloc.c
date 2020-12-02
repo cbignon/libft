@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 15:30:55 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 15:31:39 by cbignon          ###   ########.fr       */
+/*   Created: 2020/12/02 14:38:33 by cbignon           #+#    #+#             */
+/*   Updated: 2020/12/02 15:28:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t number, size_t size)
 {
-	size_t	x;
-	char	*s_tmp;
+	void	*to_allocate;
 
-	x = 0;
-	s_tmp = (char*)s;
-	while (x < n)
-	{
-		s_tmp[x] = 0;
-		x++;
-	}
+	if (!(to_allocate = malloc(size * number)))
+		return (NULL);
+	ft_bzero(to_allocate, size * number);
+	return (to_allocate);
 }

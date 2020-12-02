@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:03:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 12:25:03 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/02 14:50:07 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalpha(int c);
@@ -37,4 +38,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 int		ft_atoi(const char *nptr);
+char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t number, size_t size);
 #endif

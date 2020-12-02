@@ -6,11 +6,11 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:07:50 by cbignon           #+#    #+#             */
-/*   Updated: 2020/11/30 11:14:41 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/02 15:34:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
