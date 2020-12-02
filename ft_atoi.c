@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 11:53:01 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 12:28:33 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/02 12:49:42 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,19 @@ int	ft_atoi(const char *nptr)
 {
 	char			*str;
 	int				x;
-	unsigned int	nb;
+	int				nb;
 	int				minus;
 
 	str = (char *)nptr;
 	x = 0;
 	nb = 0;
 	minus = 1;
-	while (str[x] == '-' || str[x] == '+' || str[x] == ' ')
+	while ((str[x] >= 9 && str[x] <= 13) || str[x] == 32)
+		x++;
+	if (str[x] == '-' || str[x] == '+')
 	{
 		if (str[x] == '-')
-			minus = minus * - 1;
+			minus = minus * -1;
 		x++;
 	}
 	while (ft_isdigit(str[x]) == 1)
