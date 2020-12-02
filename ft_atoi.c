@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 15:10:07 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 11:51:50 by cbignon          ###   ########.fr       */
+/*   Created: 2020/12/02 11:53:01 by cbignon           #+#    #+#             */
+/*   Updated: 2020/12/02 12:28:33 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	x;
-	size_t	y;
+	char			*str;
+	int				x;
+	unsigned int	nb;
+	int				minus;
 
+	str = (char *)nptr;
 	x = 0;
-	if (*s2 == '\0')
-		return ((char*)s1);
-	while (s1[x] != '\0' && x < n)
+	nb = 0;
+	minus = 1;
+	while (str[x] == '-' || str[x] == '+' || str[x] == ' ')
 	{
-		y = 0;
-		while (x + y < n && s2[y] == s1[x + y] && s2[y] != '\0')
-		{
-			y++;
-			if (s2[y] == '\0')
-				return ((char*)s1 + x);
-		}
+		if (str[x] == '-')
+			minus = minus * - 1;
 		x++;
 	}
-	return (NULL);
+	while (ft_isdigit(str[x]) == 1)
+	{
+		nb = nb * 10 + (str[x] - '0');
+		x++;
+	}
+	return (nb * minus);
 }
