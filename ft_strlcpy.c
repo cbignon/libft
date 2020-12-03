@@ -6,11 +6,10 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 13:19:53 by cbignon           #+#    #+#             */
-/*   Updated: 2020/11/30 15:21:00 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/03 10:25:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
