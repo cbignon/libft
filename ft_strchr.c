@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 12:16:25 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/04 12:40:37 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/04 13:15:36 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	x;
-	int		end;
 
 	x = 0;
-	end = ft_strlen((char *)s);
-	if (c == '\0')
-		return ((char *)s + end);
-	while (s[x])
+	while ((unsigned char)s[x] || c == '\0')
 	{
 		if (s[x] == c)
 			return ((char *)s + x);
