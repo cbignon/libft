@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:58:48 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/03 11:24:18 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/07 16:40:09 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int					y;
 	char				*big_s;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	len1 = (unsigned char)ft_strlen((char*)s1);
 	len2 = (unsigned char)ft_strlen((char*)s2);
 	if (!(big_s = (char*)malloc(sizeof(char) * (len1 + len2) + 1)))
