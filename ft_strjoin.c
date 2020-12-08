@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:58:48 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/07 16:40:09 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 16:10:54 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char		len1;
-	unsigned char		len2;
-	int					x;
-	int					y;
-	char				*big_s;
+	size_t		biglen;
+	size_t		x;
+	size_t		y;
+	char		*big_s;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	len1 = (unsigned char)ft_strlen((char*)s1);
-	len2 = (unsigned char)ft_strlen((char*)s2);
-	if (!(big_s = (char*)malloc(sizeof(char) * (len1 + len2) + 1)))
+	biglen = (ft_strlen((char*)s1) + ft_strlen((char*)s2));
+	if (!(big_s = (char*)malloc(sizeof(char) * (biglen) + 1)))
 		return (NULL);
 	x = 0;
-	while (x < len1)
+	while (x < ft_strlen((char*)s1))
 	{
 		big_s[x] = s1[x];
 		x++;
 	}
 	y = 0;
-	while (x < len2 + len1)
+	while (x < biglen)
 	{
 		big_s[x] = s2[y];
 		x++;

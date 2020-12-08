@@ -27,6 +27,7 @@ SOURCES=	ft_bzero.c \
 			*ft_substr.c \
 			*ft_strjoin.c \
 			*ft_strtrim.c \
+			**ft_split.c \
 
 CFLAGS= -Wall -Werror -Wextra
 

@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:15:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/03 11:02:14 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 16:08:11 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*str;
-	unsigned int	x;
+	size_t			x;
 
 	if (!s)
 		return (NULL);
 	if (!(str = (char*)malloc(sizeof(char) * (unsigned char)len + 1)))
 		return (NULL);
 	x = 0;
-	if ((int)start < (ft_strlen((char*)s)))
+	if ((size_t)start < (ft_strlen((char*)s)))
 	{
-		while (x < (unsigned int)len)
+		while (x < len)
 		{
 			str[x] = s[start];
 			start++;
