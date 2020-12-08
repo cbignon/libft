@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 11:34:24 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 13:05:48 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 13:13:54 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ static int	ft_new_len(char const *s1, char const *set)
 		to_cut++;
 		i++;
 	}
-	if (to_cut == end)
-		return (0);
 	while (in_set(s1[end], set))
 	{
 		to_cut++;
