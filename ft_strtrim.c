@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 15:14:12 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 15:25:06 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 16:20:20 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ static int	ft_new_len(char const *s1, char const *set)
 		to_cut++;
 		i++;
 	}
-	if (to_cut == end)
+	if (to_cut == end + 1)
 		return (0);
 	while (in_set(s1[end], set))
 	{
 		to_cut++;
 		end--;
 	}
-	if ((ft_strlen((char*)s1) <= to_cut))
+	if ((ft_strlen((char*)s1) <= (size_t)to_cut))
 		return (0);
 	return ((ft_strlen((char*)s1) - to_cut));
 }
@@ -58,7 +58,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	if (set == NULL || s1 == NULL)
 		return (NULL);
-	if (!(*set))
+	if (!(*set) || !(*s1))
 		return (ft_strdup(s1));
 	if (!(newlen = ft_new_len(s1, set)))
 		return (ft_strdup(""));
