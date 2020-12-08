@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 15:14:12 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 15:14:42 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 15:25:06 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ static int	in_set(char c, char const *set)
 	return (0);
 }
 
-#include <stdio.h>
-
 static int	ft_new_len(char const *s1, char const *set)
 {
 	int		to_cut;
@@ -34,8 +32,6 @@ static int	ft_new_len(char const *s1, char const *set)
 	to_cut = 0;
 	i = 0;
 	end = ft_strlen((char*)s1) - 1;
-	printf("s1 => %s\n",s1);
-	printf("set => %s\n",set);
 	while (in_set(s1[i], set))
 	{
 		to_cut++;
@@ -43,7 +39,6 @@ static int	ft_new_len(char const *s1, char const *set)
 	}
 	if (to_cut == end)
 		return (0);
-	printf("to_cut => %d \n", to_cut);
 	while (in_set(s1[end], set))
 	{
 		to_cut++;
@@ -63,6 +58,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	if (set == NULL || s1 == NULL)
 		return (NULL);
+	if (!(*set))
+		return (ft_strdup(s1));
 	if (!(newlen = ft_new_len(s1, set)))
 		return (ft_strdup(""));
 	if (!(new_s = malloc(sizeof(char) * newlen + 1)))
@@ -78,6 +75,5 @@ char		*ft_strtrim(char const *s1, char const *set)
 		j++;
 	}
 	new_s[j] = '\0';
-	printf("New String => %s\n", new_s);
 	return (new_s);
 }
