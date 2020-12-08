@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 11:34:24 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 12:43:15 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 12:51:12 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_new_len(char const *s1, char const *set)
 	}
 	if (to_cut == end)
 		return (0);
-	printf("to_cut => %d", to_cut);
+	printf("to_cut => %d \n", to_cut);
 	while (in_set(s1[end], set))
 	{
 		to_cut++;
@@ -78,5 +78,6 @@ char		*ft_strtrim(char const *s1, char const *set)
 		j++;
 	}
 	new_s[j] = '\0';
+	printf("New String => %s\n", new_s);
 	return (new_s);
 }
