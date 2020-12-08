@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 11:34:24 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 11:46:13 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/08 11:57:05 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (set == NULL || s1 == NULL)
 		return (NULL);
 	if (!(newlen = ft_new_len(s1, set)))
-		ft_strdup(s1);
+		return (ft_strdup(""));
 	if (!(new_s = malloc(sizeof(char) * newlen + 1)))
 		return (NULL);
 	i = 0;
