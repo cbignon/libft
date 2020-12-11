@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:28:22 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/11 11:23:23 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/11 15:25:54 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		k;
 
-	if (!(s) || !(tab = malloc(sizeof(*tab) * ft_count_words(s,c) + 1)))
+	if (!(s) || !(tab = (char**)malloc(sizeof(char*) * (ft_count_words(s,c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c && s[i] != '\0')
 			i++;
 		k = 0;
-		if (!(tab[j] = malloc(sizeof(char) * (w_len + 1))))
+		if (!(tab[j] = (char*)malloc(sizeof(char) * (w_len + 1))))
 			return (NULL);
 		while (s[i] != c && s[i] != '\0' && k < w_len)
 		{
@@ -80,5 +80,6 @@ char	**ft_split(char const *s, char c)
 		if (ft_count_words(s, c) > 1)
 			w_len = ft_word_len(&s[i], c);
 	}
+	tab[j] = NULL;
 	return (tab);
 }
