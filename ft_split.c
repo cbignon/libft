@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:28:22 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 10:44:38 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 10:53:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ static void	*free_tab(char **tab)
 		j++;
 	}
 	free(tab);
-	return (NULL);
+	tab = NULL;
+	return (tab);
 }
 
 char		**ft_split(char const *s, char c)
