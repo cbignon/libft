@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 16:20:49 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 13:18:13 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 15:27:20 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char		*ft_itoa(int n)
 	ntoa[end] = '\0';
 	num = n;
 	if (n < 0)
-		num = -n;
+		num = (unsigned)-(long)n;
 	ntoa[--end] = num % 10 + '0';
 	while (num >= 10)
 	{
