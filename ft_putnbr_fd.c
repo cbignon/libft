@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 16:38:17 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 13:12:33 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 15:14:19 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd((nombre / 10), fd);
 	}
-	reste = nombre %10 +'0';
-	write (fd, &reste, 1);
+	reste = nombre % 10 + '0';
+	write(fd, &reste, 1);
 }

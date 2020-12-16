@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 16:31:59 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/15 16:57:52 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 15:14:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s != '\0')
 	{
-		write(fd, &*s,1);
+		write(fd, &*s, 1);
 		s++;
 	}
 	write(fd, "\n", 1);

@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 16:20:49 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/14 13:49:23 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 13:18:13 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_count_digit(int n)
 
 	if (n < 0)
 	{
-		nb = -n;
+		nb = (unsigned)-(long)n;
 		count = 2;
 	}
 	else

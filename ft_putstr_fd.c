@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 16:22:09 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/15 16:36:07 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 15:14:55 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s != '\0')
 	{
 		write(fd, &*s, 1);
