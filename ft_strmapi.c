@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 15:55:38 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/14 16:49:38 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/15 12:21:21 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int				len;
 	char			*res;
 
-	if (!s || !*s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen((char*)s);
 	if (!(res = (char*)malloc(sizeof(char) * len + 1)))
