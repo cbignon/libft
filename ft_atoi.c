@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 11:53:01 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 13:23:44 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 15:30:42 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_atoi(const char *nptr)
 {
-	char		*str;
-	int			x;
-	int			nb;
-	int			minus;
+	char			*str;
+	int				x;
+	unsigned int	nb;
+	int				minus;
 
 	str = (char *)nptr;
 	x = 0;
