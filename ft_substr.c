@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:15:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 16:08:11 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 11:05:33 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			start++;
 			x++;
 		}
-		str[x] = '\0';
 	}
+	str[x] = '\0';
 	return (str);
 }
