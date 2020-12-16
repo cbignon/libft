@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 10:15:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 11:05:33 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/16 13:21:19 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	x = 0;
 	if ((size_t)start < (ft_strlen((char*)s)))
 	{
-		while (x < len)
+		while (x < len && s[start])
 		{
 			str[x] = s[start];
 			start++;
