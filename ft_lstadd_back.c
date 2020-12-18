@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 15:12:11 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/18 11:25:43 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/18 11:34:57 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_back(t_list **head, t_list *element)
 	if (!*head)
 	{
 		*head = element;
-		element->next = NULL;
+		return ;
 	}
 	if (ptr && element)
 	{
@@ -29,6 +29,5 @@ void	ft_lstadd_back(t_list **head, t_list *element)
 			ptr = ptr->next;
 		}
 		ptr->next = element;
-		element->next = NULL;
 	}
 }
