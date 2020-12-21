@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/18 11:40:21 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/18 11:44:21 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/21 12:02:51 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst);
-	free(lst->content);
+	if (lst)
+	{
+		del(lst);
+		free(lst->content);
+	}
 }
