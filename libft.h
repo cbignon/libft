@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:03:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/18 10:28:10 by cbignon          ###   ########.fr       */
+/*   Updated: 2020/12/18 12:03:18 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,9 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);
-void			ft_lstadd_front(t_list **alst, t_list *element);
+void			ft_lstadd_front(t_list **head, t_list *element);
 t_list			*ft_lstlast(t_list *lst);
-void			ft_lstadd_back(t_list **alst, t_list *element);
+void			ft_lstadd_back(t_list **head, t_list *element);
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstclear(t_list **lst, void (*del)(void*));
 #endif

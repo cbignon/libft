@@ -39,6 +39,8 @@ SOURCES=	ft_bzero.c \
 			ft_lstadd_front.c \
 			*ft_lstlast.c \
 			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
 
 CFLAGS= -Wall -Werror -Wextra
 
