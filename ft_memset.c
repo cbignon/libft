@@ -6,11 +6,11 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:40:13 by cbignon           #+#    #+#             */
-/*   Updated: 2020/11/23 15:52:32 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 15:27:24 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

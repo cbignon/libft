@@ -6,11 +6,10 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:35:44 by cbignon           #+#    #+#             */
-/*   Updated: 2020/11/30 16:18:26 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 15:27:09 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

@@ -6,11 +6,10 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 11:56:20 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/01 16:05:45 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 15:28:00 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

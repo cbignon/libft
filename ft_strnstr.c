@@ -6,11 +6,10 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 15:10:07 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 11:51:50 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 15:28:27 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)

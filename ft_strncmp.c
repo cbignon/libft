@@ -6,11 +6,11 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 10:36:46 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/01 11:47:43 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 15:28:20 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
