@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/01/04 11:29:57 by cbignon           #+#    #+#              #
+#    Updated: 2021/01/04 12:20:32 by cbignon          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME= libft
 
 SOURCES=	ft_bzero.c \
@@ -34,6 +46,8 @@ SOURCES=	ft_bzero.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
+
+BONUS_SRC=	$(SOURCES) \
 			ft_lstnew.c \
 			ft_lstsize.c \
 			ft_lstadd_front.c \
@@ -41,6 +55,8 @@ SOURCES=	ft_bzero.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
+			ft_lstiter.c \
+			*ft_lstmap.c \
 
 CFLAGS= -Wall -Werror -Wextra
 
@@ -51,16 +67,21 @@ CC= clang
 
 OBJETS= $(SOURCES:.c=.o)
 
+BONUS_OBJ= $(BONUS_SRC:.c=.o)
+
 $(NAME) : $(OBJETS)
-	ar -rc $(NAME).a $(OBJETS)
+	ar -rcs $(NAME).a $(OBJETS)
 
 all : $(NAME)
 
-so : all
-	$(CC) -o $(NAME).so -shared $(OBJETS)
+bonus : $(BONUS_OBJ)
+	ar -rcs $(NAME).a $(BONUS_OBJ)
+
+so : $(BONUS_OBJ)
+	$(CC) -o $(NAME).so -shared $(BONUS_OBJ)
 
 clean :
-	rm -f $(OBJETS)
+	rm -f $(BONUS_OBJ)
 
 fclean : clean
 	rm -f $(NAME).a

@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 11:03:08 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/18 12:03:18 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/01/04 12:19:48 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,7 @@ t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **head, t_list *element);
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+void (*del)(void *));
 #endif
