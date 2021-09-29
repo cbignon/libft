@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:28:22 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 12:42:02 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:26:59 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ static void	*free_tab(char **tab, int j)
 	return (tab);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
 	int		j;
 	int		k;
 
-	if (!(s) || !(tab = (char**)malloc(sizeof(char*)
-	* (ft_count_words(s, c) + 1))))
+	tab = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!(s) || !(tab))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -81,8 +81,8 @@ char		**ft_split(char const *s, char c)
 		while (s[i] == c && s[i] != '\0')
 			i++;
 		k = 0;
-		if (!(tab[j] = (char*)malloc(sizeof(char)
-		* (ft_word_len(&s[i], c) + 1))))
+		tab[j] = (char *)malloc(sizeof(char) * (ft_word_len(&s[i], c) + 1));
+		if (!(tab[j]))
 			return (free_tab(tab, j));
 		while (s[i] != c && s[i] != '\0')
 			tab[j][k++] = s[i++];

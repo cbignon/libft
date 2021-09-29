@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 10:07:50 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 15:34:44 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:15:57 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char		*src_tmp;
 
 	x = 0;
-	dest_tmp = (unsigned char*)dest;
-	src_tmp = (unsigned char*)src;
+	dest_tmp = (unsigned char *)dest;
+	src_tmp = (unsigned char *)src;
 	while (x < n)
 	{
 		dest_tmp[x] = src_tmp[x];
 		if (src_tmp[x] == (unsigned char)c)
-			return ((void*)&(dest[x + 1]));
+			return ((void *)&(dest[x + 1]));
 		x++;
 	}
 	return (NULL);

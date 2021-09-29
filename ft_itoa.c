@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 16:20:49 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/16 15:27:20 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:46:16 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,15 @@ static int	ft_count_digit(int n)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	num;
 	char			*ntoa;
 	int				end;
 
 	end = ft_count_digit(n);
-	if (!(ntoa = (char*)malloc(sizeof(char) * end + 1)))
+	ntoa = (char *)malloc(sizeof(char) * end + 1);
+	if (!ntoa)
 		return (NULL);
 	ntoa[end] = '\0';
 	num = n;

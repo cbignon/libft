@@ -6,7 +6,7 @@
 #    By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:29:57 by cbignon           #+#    #+#              #
-#    Updated: 2021/01/04 12:20:32 by cbignon          ###   ########.fr        #
+#    Updated: 2021/09/29 10:52:17 by cbignon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SOURCES=	ft_bzero.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
+			ft_pow.c \
 
 BONUS_SRC=	$(SOURCES) \
 			ft_lstnew.c \

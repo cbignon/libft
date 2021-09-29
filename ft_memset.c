@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 11:40:13 by cbignon           #+#    #+#             */
-/*   Updated: 2021/01/04 15:27:24 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:21:37 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	char	*st;
 
 	i = 0;
-	st = (char*)s;
+	st = (char *)s;
 	while (i < n)
 	{
 		st[i] = c;
 		i++;
 	}
-	return ((void*)s);
+	return ((void *)s);
 }

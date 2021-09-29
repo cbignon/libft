@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 15:14:12 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/08 16:20:20 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:35:44 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_new_len(char const *s1, char const *set)
 
 	to_cut = 0;
 	i = 0;
-	end = ft_strlen((char*)s1) - 1;
+	end = ft_strlen((char *)s1) - 1;
 	while (in_set(s1[i], set))
 	{
 		to_cut++;
@@ -44,12 +44,12 @@ static int	ft_new_len(char const *s1, char const *set)
 		to_cut++;
 		end--;
 	}
-	if ((ft_strlen((char*)s1) <= (size_t)to_cut))
+	if ((ft_strlen((char *)s1) <= (size_t)to_cut))
 		return (0);
-	return ((ft_strlen((char*)s1) - to_cut));
+	return ((ft_strlen((char *)s1) - to_cut));
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		newlen;
 	int		i;
@@ -60,20 +60,18 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	if (!(*set) || !(*s1))
 		return (ft_strdup(s1));
-	if (!(newlen = ft_new_len(s1, set)))
+	newlen = ft_new_len(s1, set);
+	if (!newlen)
 		return (ft_strdup(""));
-	if (!(new_s = malloc(sizeof(char) * newlen + 1)))
+	new_s = malloc(sizeof(char) * newlen + 1);
+	if (!new_s)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (in_set((char)s1[i], (char*)set))
+	while (in_set((char)s1[i], (char *)set))
 		i++;
 	while (j < newlen)
-	{
-		new_s[j] = s1[i];
-		i++;
-		j++;
-	}
+		new_s[j++] = s1[i++];
 	new_s[j] = '\0';
 	return (new_s);
 }

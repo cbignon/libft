@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 13:16:37 by cbignon           #+#    #+#             */
-/*   Updated: 2021/01/04 12:57:31 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:23:11 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	newhead = NULL;
 	while (lst)
 	{
-		if (!(elt = ft_lstnew(f(lst->content))))
+		elt = ft_lstnew(f(lst->content));
+		if (!elt)
 		{
 			ft_lstclear(&newhead, del);
 			return (NULL);

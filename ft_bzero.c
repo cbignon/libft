@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:30:55 by cbignon           #+#    #+#             */
-/*   Updated: 2020/12/02 15:31:39 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:14:08 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*s_tmp;
 
 	x = 0;
-	s_tmp = (char*)s;
+	s_tmp = (char *)s;
 	while (x < n)
 	{
 		s_tmp[x] = 0;

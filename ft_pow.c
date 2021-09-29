@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/02 14:38:33 by cbignon           #+#    #+#             */
-/*   Updated: 2021/09/29 10:44:13 by cbignon          ###   ########.fr       */
+/*   Created: 2021/09/29 10:49:46 by cbignon           #+#    #+#             */
+/*   Updated: 2021/09/29 10:50:16 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
+long	ft_pow(long nb, int power)
 {
-	void	*to_allocate;
-
-	to_allocate = malloc(size * number);
-	if (!(to_allocate))
-		return (NULL);
-	ft_bzero(to_allocate, size * number);
-	return (to_allocate);
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	return (nb * ft_pow(nb, power - 1));
 }

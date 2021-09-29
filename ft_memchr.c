@@ -6,7 +6,7 @@
 /*   By: cbignon <cbignon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:37:02 by cbignon           #+#    #+#             */
-/*   Updated: 2021/01/04 14:41:58 by cbignon          ###   ########.fr       */
+/*   Updated: 2021/09/29 10:27:20 by cbignon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*s_tmp;
 
 	x = 0;
-	s_tmp = (unsigned char*)s;
+	s_tmp = (unsigned char *)s;
 	while (x < n)
 	{
 		if (s_tmp[x] == (unsigned char)c)
-			return ((void*)&(s_tmp[x]));
+			return ((void *)&(s_tmp[x]));
 		x++;
 	}
 	return (NULL);
